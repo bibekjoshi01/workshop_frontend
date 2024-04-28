@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Open_Sans } from "next/font/google";
 import Header from "./(public)/layout/header";
 import Footer from "./(public)/layout/footer";
 import "./globals.css";
