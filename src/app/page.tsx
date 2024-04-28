@@ -1,19 +1,19 @@
-import { Button } from "@/components/ui/button";
-import SignUp from "./(auth)/signup/page";
-import Hero from "@/app/appComponents/hero";
+// import { Button } from "@/components/ui/button";
+// import SignUp from "./(auth)/signup/page";
 import Header from "@/app/appComponents/header";
+import Hero from "@/app/appComponents/hero";
+import Events from "./appComponents/events";
+import MeetUps from "./appComponents/meetup";
+import HowItWorksCards from "./appComponents/howItWorks";
 import Footer from "@/components/footer";
-import EventsHeader from "@/app/appComponents/events";
-import AllEvents from "@/app/appComponents/allEvents";
-import HowItWorksCards from "./appComponents/howItWorksCards";
 
 export default function Home() {
   return (
     <div>
       <Header />
       <Hero />
-      <EventsHeader />
-      <AllEvents />
+      <Events />
+      <MeetUps/>
       <HowItWorksCards />
       <Footer />
 

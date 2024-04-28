@@ -33,10 +33,10 @@ export default function EventsHeader() {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectGroup>
-                    <SelectItem value="music">Music</SelectItem>
-                    <SelectItem value="art">Art</SelectItem>
-                    <SelectItem value="technology">Technology</SelectItem>
-                    <SelectItem value="sports">Sports</SelectItem>
+                    <SelectItem className="cursor-pointer" value="music">Music</SelectItem>
+                    <SelectItem className="cursor-pointer" value="art">Art</SelectItem>
+                    <SelectItem className="cursor-pointer" value="technology">Technology</SelectItem>
+                    <SelectItem className="cursor-pointer" value="sports">Sports</SelectItem>
                   </SelectGroup>
                 </SelectContent>
               </Select>
@@ -49,10 +49,10 @@ export default function EventsHeader() {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectGroup>
-                    <SelectItem value="new-york">New York</SelectItem>
-                    <SelectItem value="san-francisco">San Francisco</SelectItem>
-                    <SelectItem value="london">London</SelectItem>
-                    <SelectItem value="tokyo">Tokyo</SelectItem>
+                    <SelectItem className="cursor-pointer" value="new-york">New York</SelectItem>
+                    <SelectItem className="cursor-pointer" value="san-francisco">San Francisco</SelectItem>
+                    <SelectItem className="cursor-pointer" value="london">London</SelectItem>
+                    <SelectItem className="cursor-pointer" value="tokyo">Tokyo</SelectItem>
                   </SelectGroup>
                 </SelectContent>
               </Select>
@@ -65,8 +65,8 @@ export default function EventsHeader() {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectGroup>
-                    <SelectItem value="remote">Remote</SelectItem>
-                    <SelectItem value="in-person">In-Person</SelectItem>
+                    <SelectItem className="cursor-pointer" value="remote">Remote</SelectItem>
+                    <SelectItem className="cursor-pointer" value="in-person">In-Person</SelectItem>
                   </SelectGroup>
                 </SelectContent>
               </Select>
