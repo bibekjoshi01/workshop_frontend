@@ -15,7 +15,7 @@ export default function EventPagination() {
             2
           </PaginationLink>
         </PaginationItem>
-        <PaginationItem>
+        <PaginationItem className="hidden sm:block">
           <PaginationLink href="#">3</PaginationLink>
         </PaginationItem>
         <PaginationItem>

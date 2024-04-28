@@ -75,3 +75,44 @@
   }
 }
 
+.animateIcons:hover {
+  animation-name: animateicon;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  animation-duration: 0.4s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+}
+
+@keyframes animateicon {
+  0% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(2.5deg);
+  }
+  40% {
+    transform: rotate(2.5px);
+  }
+  60% {
+    transform: rotate(-2.5deg);
+  }
+  80% {
+    transform: rotate(-2.5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.scale101 {
+  transition-duration: 300ms !important;
+}
+.scale101:hover {
+  transform: scale(1.01);
+}
+
+.scale104 {
+  transition-duration: 500ms !important;
+}
+.scale104:hover {
+  transform: scale(1.04);
+}
