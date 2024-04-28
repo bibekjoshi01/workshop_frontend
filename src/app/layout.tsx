@@ -1,9 +1,16 @@
-import { Open_Sans } from "next/font/google";
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
 import Header from "./(public)/layout/header";
 import Footer from "./(public)/layout/footer";
+import "./globals.css";
 
-export const metadata = {
-  title: "Workshop",
+const inter = Inter({ subsets: ["latin"] });
+
+export const metadata: Metadata = {
+  title: {
+    template: "%s | Workshopify",
+    default: "Workshopify",
+  },
   description: "Join Us",
 };
 
@@ -19,12 +26,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html>
-      <head>
-        <title>{metadata.title}</title>
-        <meta name="description" content={metadata.description} />
-      </head>
-      <body>
+    <html lang="en">
+      <body className={`${inter.className} antialiased`}>
         <Header />
         {children}
         <Footer />
