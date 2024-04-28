@@ -5,8 +5,8 @@ import { Button } from "@/components/ui/button";
 
 export default function AdminLogin() {
   return (
-    <div className="flex min-h-[100dvh] items-center justify-center bg-gray-100 px-4 py-12 dark:bg-gray-950">
-      <div className="mx-auto w-full max-w-md space-y-8">
+    <div className="flex min-h-[100dvh] items-center justify-center bg-gray-100 px-4 py-12 dark:bg-gray-950 ">
+      <div className="mx-auto w-full max-w-md space-y-8 p-8 border-solid border rounded-lg">
         <div>
           <h2 className="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-50">
             Sign in to your account
@@ -17,7 +17,7 @@ export default function AdminLogin() {
               className="font-medium text-indigo-600 hover:text-indigo-500 dark:text-indigo-400 dark:hover:text-indigo-300"
               href="#"
             >
-              start your 14-day free trial
+              &nbsp; Create in account
             </Link>
           </p>
         </div>
@@ -34,6 +34,7 @@ export default function AdminLogin() {
                 autoComplete="email"
                 className="block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-50 dark:placeholder-gray-400"
                 id="email"
+                placeholder="mail@example.com"
                 name="email"
                 required
                 type="email"
