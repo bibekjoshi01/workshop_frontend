@@ -13,7 +13,7 @@ export default function HowItWorksCards() {
           </div>
           <div className="grid w-full max-w-4xl grid-cols-1 gap-8 sm:grid-cols-3 overflow-clip">
             <div className="flex flex-col items-center space-y-4">
-              <div className="mx-auto mb-4 hidden sm:block animateIcons cursor-pointer">
+              <div className="mx-auto mb-4 hidden sm:block hover:animate-animateicon cursor-pointer">
                 <MicroscopeIcon className="h-20 w-20 text-blue-500" />
               </div>
               <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gray-900 text-xl font-bold text-gray-50 dark:bg-gray-50 dark:text-gray-900 relative after:right-full after:z-10 after:absolute after:min-w-36 after:rounded-sm before:rounded-sm  after:h-1 after:bg-black before:left-full before:z-10 before:absolute before:min-w-36  before:h-1 before:bg-black after:hidden before:hidden sm:before:block">
@@ -29,7 +29,7 @@ export default function HowItWorksCards() {
               </div>
             </div>
             <div className="flex flex-col items-center space-y-4">
-              <div className="mx-auto mb-4 hidden sm:block animateIcons cursor-pointer">
+              <div className="mx-auto mb-4 hidden sm:block hover:animate-animateicon cursor-pointer">
                 <CalendarIcon className="h-20 w-20 text-purple-500" />
               </div>
               <div className=" relative after:right-full after:z-10 after:absolute after:min-w-36 before:rounded-sm  after:h-1 after:bg-black before:left-full before:z-10 before:absolute before:min-w-36  before:h-1 before:bg-black flex h-12 w-12 items-center justify-center rounded-full bg-gray-900 text-xl font-bold text-gray-50 dark:bg-gray-50 dark:text-gray-900 after:hidden before:hidden sm:after:block sm:before:block">
@@ -46,7 +46,7 @@ export default function HowItWorksCards() {
               </div>
             </div>
             <div className="flex flex-col items-center space-y-4">
-              <div className="mx-auto mb-4 hidden sm:block animateIcons cursor-pointer">
+              <div className="mx-auto mb-4 hidden sm:block hover:animate-animateicon cursor-pointer">
                 <PartyPopperIcon className="h-20 w-20 text-blue-500" />
               </div>
               <div className=" relative after:right-full after:z-10 after:absolute after:min-w-36 after:rounded-sm before:rounded-sm  after:h-1 after:bg-black flex h-12 w-12 items-center justify-center rounded-full bg-gray-900 text-xl font-bold text-gray-50 dark:bg-gray-50 dark:text-gray-900 before:left-full before:z-10 before:absolute before:min-w-36  before:h-1 before:bg-black after:hidden before:hidden sm:after:block">

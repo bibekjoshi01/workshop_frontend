@@ -8,7 +8,7 @@ export default function Header() {
         <div className="container px-4 md:px-6 flex items-center justify-between">
           <Link className="flex items-center gap-2 font-semibold" href="#">
             <MountainIcon className="h-6 w-6" />
-            <span>Acme Tech Events</span>
+            <span>Workshopify</span>
           </Link>
           <nav className="hidden md:flex items-center gap-6">
             <Link className="hover:underline" href="#">
