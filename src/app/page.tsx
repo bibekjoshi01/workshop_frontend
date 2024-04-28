@@ -1,5 +1,4 @@
 // import { Button } from "@/components/ui/button";
-// import SignUp from "./(auth)/signup/page";
 import React from "react";
 import Hero from "./(public)/components/hero";
 import Events from "./(public)/components/events";
@@ -13,7 +12,7 @@ export default function Home() {
       <Events />
       <MeetUps />
       <HowItWorksCards />
-      {/* <SignUp /> */}
+      
       {/* <Button size={"lg"} variant={"outline"} >
         Button
       </Button> */}
