@@ -14,11 +14,17 @@ export const metadata: Metadata = {
   description: "Join Us",
 };
 
+const openSans = Open_Sans({
+  weight: ["400", "700"],
+  style: ["normal", "italic"],
+  subsets: ["latin"],
+});
+
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
       <body className={`${inter.className} antialiased`}>
