@@ -26,12 +26,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={`${inter.className} antialiased`}>
-        <Header />
-        {children}
-        <Footer />
-      </body>
-    </html>
+    <div className={`${openSans.className} bgColor publicBody`}>
+      <Header />
+      <div className={"main"}>{children}</div>
+      <Footer />
+    </div>
   );
 }
