@@ -1,21 +1,17 @@
 // import { Button } from "@/components/ui/button";
 // import SignUp from "./(auth)/signup/page";
-import Header from "@/app/appComponents/header";
-import Hero from "@/app/appComponents/hero";
-import Events from "./appComponents/events";
-import MeetUps from "./appComponents/meetup";
-import HowItWorksCards from "./appComponents/howItWorks";
-import Footer from "@/components/footer";
+import Hero from "./(public)/components/hero";
+import Events from "./(public)/components/events";
+import MeetUps from "./(public)/components/meetup";
+import HowItWorksCards from "./(public)/components/howItWorks";
 
 export default function Home() {
   return (
     <div>
-      <Header />
       <Hero />
       <Events />
       <MeetUps/>
       <HowItWorksCards />
-      <Footer />
 
       {/* <SignUp /> */}
       {/* <Button size={"lg"} variant={"outline"} >
