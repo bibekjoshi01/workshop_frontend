@@ -1,9 +1,9 @@
 // import { Button } from "@/components/ui/button";
 import React from "react";
-import Hero from "./(public)/components/hero";
-import Events from "./(public)/components/events";
-import MeetUps from "./(public)/components/meetup";
-import HowItWorksCards from "./(public)/components/howItWorks";
+import Hero from "./components/hero";
+import Events from "./components/events";
+import MeetUps from "./components/meetup";
+import HowItWorksCards from "./components/howItWorks";
 
 export default function Home() {
   return (
@@ -12,7 +12,8 @@ export default function Home() {
       <Events />
       <MeetUps />
       <HowItWorksCards />
-      
+
+      {/* <CookieModal /> */}
       {/* <Button size={"lg"} variant={"outline"} >
         Button
       </Button> */}
