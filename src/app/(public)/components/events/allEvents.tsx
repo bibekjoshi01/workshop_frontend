@@ -18,7 +18,7 @@ export default function AllEvents() {
                 >
                   <Image
                     alt="Event Image"
-                    className="w-full h-48 object-cover scale104 transition-all"
+                    className="w-full h-48 object-cover hover:scale-[1.04] duration-300 transition-all"
                     height="200"
                     src="/eventImage.png"
                     style={{
