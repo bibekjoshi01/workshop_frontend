@@ -6,13 +6,13 @@ export default function Header() {
     <>
       <header className="w-full text-gray-900 py-4 dark:text-gray-50">
         <div className="container px-4 md:px-6 flex items-center justify-between">
-          <Link className="flex items-center gap-2 font-semibold" href="#">
+          <Link className="flex items-center gap-2 font-semibold" href="/">
             <MountainIcon className="h-6 w-6" />
             <span>Workshopify</span>
           </Link>
           <nav className="hidden md:flex items-center gap-6">
-            <Link className="hover:underline" href="#">
-              Register
+            <Link className="hover:underline" href="login">
+              Login
             </Link>
             <Link className="hover:underline" href="#">
               Learn More

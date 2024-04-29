@@ -78,17 +78,3 @@
     display: none;
   }
 }
-
-.scale101 {
-  transition-duration: 300ms !important;
-}
-.scale101:hover {
-  transform: scale(1.01);
-}
-
-.scale104 {
-  transition-duration: 500ms !important;
-}
-.scale104:hover {
-  transform: scale(1.04);
-}

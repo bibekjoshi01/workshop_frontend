@@ -16,7 +16,7 @@ export default function PastMeetUps() {
             </div>
           </div>
           <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 py-12 sm:grid-cols-2 lg:grid-cols-3">
-            <Card className="cursor-pointer bg-white scale101 transition-all dark:bg-gray-950 shadow-lg hover:shadow-xl">
+            <Card className="cursor-pointer bg-white hover:scale-[1.01] duration-300 transition-all dark:bg-gray-950 shadow-lg hover:shadow-xl">
               <CardContent className="space-y-4">
                 <div className="inline-block rounded-lg text-white dark:text-black bg-gray-800 px-3 py-1 text-sm dark:bg-gray-100">
                   #Web Dev.
@@ -38,7 +38,7 @@ export default function PastMeetUps() {
                 </Button>
               </CardFooter>
             </Card>
-            <Card className="cursor-pointer bg-white scale101 transition-all dark:bg-gray-950 shadow-lg hover:shadow-xl">
+            <Card className="cursor-pointer bg-white hover:scale-[1.01] duration-300 transition-all dark:bg-gray-950 shadow-lg hover:shadow-xl">
               <CardContent className="space-y-4">
                 <div className="inline-block rounded-lg text-white dark:text-black bg-gray-800 px-3 py-1 text-sm dark:bg-gray-100">#AI/ML</div>
                 <h3 className="text-2xl font-bold">Intro to Machine Learning</h3>
@@ -58,7 +58,7 @@ export default function PastMeetUps() {
                 </Button>
               </CardFooter>
             </Card>
-            <Card className="cursor-pointer bg-white scale101 transition-all dark:bg-gray-950 shadow-lg hover:shadow-xl">
+            <Card className="cursor-pointer bg-white hover:scale-[1.01] duration-300  transition-all dark:bg-gray-950 shadow-lg hover:shadow-xl">
               <CardContent className="space-y-4">
                 <div className="inline-block rounded-lg text-white dark:text-black bg-gray-800 px-3 py-1 text-sm dark:bg-gray-100">
                   #Entrepreneurship

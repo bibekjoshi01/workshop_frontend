@@ -4,6 +4,7 @@ import Hero from "./components/hero";
 import Events from "./components/events";
 import MeetUps from "./components/meetup";
 import HowItWorksCards from "./components/howItWorks";
+import ComingSoon from "./components/comingSoon";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Events />
       <MeetUps />
       <HowItWorksCards />
+      {/* <ComingSoon /> */}
 
       {/* <CookieModal /> */}
       {/* <Button size={"lg"} variant={"outline"} >
