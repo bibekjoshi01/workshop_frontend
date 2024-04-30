@@ -1,7 +1,13 @@
+"use client";
+
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+// import { useImmer } from "use-immer";
+import { useState } from "react";
+import { IoNotifications } from "react-icons/io5";
 
 export default function Header() {
+  const [isLogged, setIsLogged] = useState(true);
   return (
     <>
       <header className="w-full text-gray-900 py-4 dark:text-gray-50">
@@ -11,12 +17,13 @@ export default function Header() {
             <span>Workshopify</span>
           </Link>
           <nav className="hidden md:flex items-center gap-6">
-            <Link className="hover:underline" href="login">
-              Login
+            <Link
+              className="hover:underline"
+              href={isLogged ? "MyProfile" : "login"}
+            >
+              {isLogged ? "My profile" : "Login"}
             </Link>
-            <Link className="hover:underline" href="#">
-              Learn More
-            </Link>
+            {isLogged && <Link className="hover:underline" href="#"><IoNotifications className="text-2xl hover:animate-animateicon transition-all"/></Link>}
           </nav>
           <Button className="md:hidden" size="icon" variant="outline">
             <MenuIcon className="h-6 w-6" />
@@ -24,7 +31,6 @@ export default function Header() {
           </Button>
         </div>
       </header>
-      
     </>
   );
 }
@@ -50,7 +56,7 @@ function MenuIcon(props: any) {
   );
 }
 
-function MountainIcon(props : any) {
+function MountainIcon(props: any) {
   return (
     <svg
       {...props}

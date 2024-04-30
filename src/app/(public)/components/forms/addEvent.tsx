@@ -17,7 +17,7 @@ export default function AddEvent() {
       <div className="p-4 lg:p-6">
         {/* First form content */}
         <div className="lg:flex gap-2">
-          <div className="space-y-2 basis-2/5 mb-10">
+          <div className="space-y-2 basis-2/5 mb-10 lg:sticky lg:top-0 ">
             <h2 className="text-2xl font-bold tracking-wider uppercase text-gray-900 dark:text-gray-50">
               <UsersIcon className="mr-2 inline-block h-6 w-6 text-gray-900 dark:text-gray-50" />
               1. ORGANIZER INFORMATION
@@ -26,13 +26,13 @@ export default function AddEvent() {
               Enter the information of the person organizing the event.
             </p>
           </div>
-          <div className="grid gap-4 basis-3/5 border rounded-3xl p-6 md:p-12">
+          <div className="grid gap-4 basis-3/5 border rounded-3xl p-6 md:p-12 hover:border-gray-400">
             <div className="space-y-1.5 grid gap-2">
               <Label className="text-sm font-bold" htmlFor="full-name">
                 Full Name
               </Label>
               <Input
-                className="rounded-full px-4 py-2.5 md:p-7 text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2 dark:text-gray-50 dark:focus:ring-gray-50 dark:focus:ring-offset-gray-900"
+                className="rounded-full px-4 py-2.5 md:p-7 text-sm font-medium  bg-white shadow-sm hover:border-blue-600 focus:ring-blue-700 focus:ring-1 focus:ring-offset-0 transition-colors  dark:bg-gray-950 dark:border-blue-50 dark:focus:border-blue-100 dark:focus:ring-blue-200"
                 id="full-name"
                 placeholder="John Doe"
               />
@@ -42,9 +42,9 @@ export default function AddEvent() {
                 Email Address
               </Label>
               <Input
-                className="rounded-full px-4 py-2.5 md:p-7 text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2 dark:text-gray-50 dark:focus:ring-gray-50 dark:focus:ring-offset-gray-900"
+                className="rounded-full px-4 py-2.5 md:p-7 text-sm font-medium  bg-white shadow-sm hover:border-blue-600 focus:ring-blue-700 focus:ring-1 focus:ring-offset-0 transition-colors  dark:bg-gray-950 dark:border-blue-50 dark:focus:border-blue-100 dark:focus:ring-blue-200"
                 id="email"
-                placeholder="Email Address"
+                placeholder="johndoe14@gmail.com"
                 type="email"
               />
             </div>
@@ -53,9 +53,9 @@ export default function AddEvent() {
                 Phone Number
               </Label>
               <Input
-                className="rounded-full px-4 py-2.5 md:p-7 text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2 dark:text-gray-50 dark:focus:ring-gray-50 dark:focus:ring-offset-gray-900"
+                className="rounded-full px-4 py-2.5 md:p-7 text-sm font-medium  bg-white shadow-sm hover:border-blue-600 focus:ring-blue-700 focus:ring-1 focus:ring-offset-0 transition-colors dark:bg-gray-950 dark:border-blue-50 dark:focus:border-blue-100 dark:focus:ring-blue-200"
                 id="phone"
-                placeholder="Phone Number"
+                placeholder="98XXXXXXXX"
               />
             </div>
           </div>
@@ -73,15 +73,15 @@ export default function AddEvent() {
             </p>
           </div>
 
-          <div className="grid gap-4 basis-3/5 border rounded-3xl p-6 md:p-12">
+          <div className="grid gap-4 basis-3/5 border rounded-3xl p-6 md:p-12 hover:border-gray-400">
             <div className="space-y-1.5 grid gap-2">
               <Label className="text-sm font-bold" htmlFor="event-name">
                 Event Name
               </Label>
               <Input
-                className="rounded-full px-4 py-2.5 md:p-7 text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2 dark:text-gray-50 dark:focus:ring-gray-50 dark:focus:ring-offset-gray-900"
+                className="rounded-full px-4 py-2.5 md:p-7 text-sm font-medium  bg-white shadow-sm hover:border-blue-600 focus:ring-blue-700 focus:ring-1 focus:ring-offset-0 transition-colors dark:bg-gray-950 dark:border-blue-50 dark:focus:border-blue-100 dark:focus:ring-blue-200"
                 id="event-name"
-                placeholder="Event Name"
+                placeholder="MERN bootcamp"
               />
             </div>
             <div className="space-y-1.5 grid gap-2">
@@ -89,9 +89,9 @@ export default function AddEvent() {
                 Event Location
               </Label>
               <Input
-                className="rounded-full px-4 py-2.5 md:p-7 text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2 dark:text-gray-50 dark:focus:ring-gray-50 dark:focus:ring-offset-gray-900"
+                className="rounded-full px-4 py-2.5 md:p-7 text-sm font-medium  bg-white shadow-sm hover:border-blue-600 focus:ring-blue-700 focus:ring-1 focus:ring-offset-0 transition-colors dark:bg-gray-950 dark:border-blue-50 dark:focus:border-blue-100 dark:focus:ring-blue-200"
                 id="location"
-                placeholder="Event Location"
+                placeholder="Thapathali Campus"
               />
             </div>
             <div className="space-y-1.5 grid gap-2">
@@ -99,10 +99,9 @@ export default function AddEvent() {
                 Event Type
               </Label>
               <Select
-              //   className="rounded-full px-4 py-2.5 md:p-7 text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2 dark:text-gray-50 dark:focus:ring-gray-50 dark:focus:ring-offset-gray-900"
               //   id="type"
               >
-                <SelectTrigger>
+                <SelectTrigger className="w-full pl-10 pr-4 py-2 rounded-md bg-white shadow-sm hover:border-blue-600 focus:ring-blue-700 focus:ring-1 focus:ring-offset-0 transition-colors dark:bg-gray-950 dark:border-blue-50 dark:focus:border-blue-100 dark:focus:ring-blue-200">
                   <SelectValue placeholder="Select Event Type" />
                 </SelectTrigger>
                 <SelectContent>
@@ -116,9 +115,9 @@ export default function AddEvent() {
                 Event Information
               </Label>
               <Textarea
-                className="rounded-xl px-4 py-2.5 md:p-7 text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2 dark:text-gray-50 dark:focus:ring-gray-50 dark:focus:ring-offset-gray-900"
+                className="rounded-xl px-4 py-2.5 md:p-7 text-sm font-medium bg-white shadow-sm hover:border-blue-600 focus:ring-blue-700 focus:ring-1 focus:ring-offset-0 transition-colors dark:bg-gray-950 dark:border-blue-50 dark:focus:border-blue-100 dark:focus:ring-blue-200"
                 id="info"
-                placeholder="Event Information"
+                placeholder="MERN bootcamp is a 3-day event where you will learn the basics of MERN stack."
               />
             </div>
             <div className="space-y-1.5 grid gap-2">
@@ -126,9 +125,9 @@ export default function AddEvent() {
                 Event Schedule
               </Label>
               <Textarea
-                className="rounded-xl px-4 py-2.5 md:p-7 text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2 dark:text-gray-50 dark:focus:ring-gray-50 dark:focus:ring-offset-gray-900"
+                className="rounded-xl px-4 py-2.5 md:p-7 text-sm font-medium bg-white shadow-sm hover:border-blue-600 focus:ring-blue-700 focus:ring-1 focus:ring-offset-0 transition-colors dark:bg-gray-950 dark:border-blue-50 dark:focus:border-blue-100 dark:focus:ring-blue-200"
                 id="schedule"
-                placeholder="Event Schedule"
+                placeholder="Daily at 7:00 AM - 9:00 AM"
               />
             </div>
             <div className="space-y-1.5 grid gap-2">
@@ -136,10 +135,9 @@ export default function AddEvent() {
                 Event Category
               </Label>
               <Select
-              //   className="rounded-full px-4 py-2.5 md:p-7 text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2 dark:text-gray-50 dark:focus:ring-gray-50 dark:focus:ring-offset-gray-900"
               //   id="category"
               >
-                <SelectTrigger>
+                <SelectTrigger className="w-full pl-10 pr-4 py-2 rounded-md bg-white shadow-sm hover:border-blue-600 focus:ring-blue-700 focus:ring-1 focus:ring-offset-0  transition-colors  dark:bg-gray-950 dark:border-blue-50 dark:focus:border-blue-100 dark:focus:ring-blue-200">
                   <SelectValue placeholder="Select Event Category" />
                 </SelectTrigger>
                 <SelectContent>
@@ -154,14 +152,14 @@ export default function AddEvent() {
 
             {/* TODO Submit Button */}
             <div className="flex flex-col items-center gap-4 md:flex-row md:items-start md:justify-between mt-8">
-              <Button className="w-full rounded-3xl hover:scale-95 transition-all p-4 md:p-8 md:w-auto bg-gray-900 text-gray-50 hover:bg-gray-900/90 focus-visible:ring-gray-950 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300">
+              <Button className="w-full rounded-2xl hover:scale-95 transition-all p-4 md:p-8 md:w-auto bg-gray-900 text-gray-50 hover:bg-gray-900/90 focus-visible:ring-gray-950 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300">
                 <CheckIcon className="mr-2 inline-block h-5 w-5" />
                 Submit Event
               </Button>
               <p className="text-xs text-gray-500 dark:text-gray-400">
-                By submitting this event, you agree to our
+                By submitting this event, you agree to our{" "}
                 <Link
-                  className="underline underline-offset-2 hover:text-gray-900 dark:hover:text-gray-50"
+                  className="underline underline-offset-2 text-blue-600 hover:text-blue-700 dark:hover:text-blue-50"
                   href="#"
                 >
                   Terms & Conditions

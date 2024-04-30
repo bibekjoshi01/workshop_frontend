@@ -20,7 +20,7 @@ export default function EventsHeader() {
             <div className="relative">
               <SearchIcon className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500 dark:text-gray-400" />
               <Input
-                className="w-full pl-10 pr-4 py-2 rounded-md bg-white shadow-sm border border-gray-200 focus:border-gray-900 focus:ring-gray-900 dark:bg-gray-950 dark:border-gray-800 dark:focus:border-gray-50 dark:focus:ring-gray-50"
+                className="w-full pl-10 pr-4 py-2 rounded-md bg-white shadow-sm hover:border-blue-600 focus:ring-blue-700 focus:ring-1 focus:ring-offset-0 transition-colors dark:bg-gray-950 dark:border-blue-50 dark:focus:border-blue-100 dark:focus:ring-blue-200"
                 placeholder="Search for events"
                 type="text"
               />
@@ -28,15 +28,23 @@ export default function EventsHeader() {
             <div className="relative">
               <CatIcon className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500 dark:text-gray-400" />
               <Select>
-                <SelectTrigger className="w-full pl-10 pr-4 py-2 rounded-md bg-white shadow-sm border border-gray-200 focus:border-gray-900 focus:ring-gray-900 dark:bg-gray-950 dark:border-gray-800 dark:focus:border-gray-50 dark:focus:ring-gray-50">
+                <SelectTrigger className="w-full pl-10 pr-4 py-2 rounded-md bg-white shadow-sm hover:border-blue-600 focus:ring-blue-700 focus:ring-1 focus:ring-offset-0 transition-colors dark:bg-gray-950 dark:border-blue-50 dark:focus:border-blue-100 dark:focus:ring-blue-200">
                   <SelectValue placeholder="Category" />
                 </SelectTrigger>
                 <SelectContent>
                   <SelectGroup>
-                    <SelectItem className="cursor-pointer" value="music">Music</SelectItem>
-                    <SelectItem className="cursor-pointer" value="art">Art</SelectItem>
-                    <SelectItem className="cursor-pointer" value="technology">Technology</SelectItem>
-                    <SelectItem className="cursor-pointer" value="sports">Sports</SelectItem>
+                    <SelectItem className="cursor-pointer" value="music">
+                      Music
+                    </SelectItem>
+                    <SelectItem className="cursor-pointer" value="art">
+                      Art
+                    </SelectItem>
+                    <SelectItem className="cursor-pointer" value="technology">
+                      Technology
+                    </SelectItem>
+                    <SelectItem className="cursor-pointer" value="sports">
+                      Sports
+                    </SelectItem>
                   </SelectGroup>
                 </SelectContent>
               </Select>
@@ -44,15 +52,26 @@ export default function EventsHeader() {
             <div className="relative">
               <LocateIcon className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500 dark:text-gray-400" />
               <Select>
-                <SelectTrigger className="w-full pl-10 pr-4 py-2 rounded-md bg-white shadow-sm border border-gray-200 focus:border-gray-900 focus:ring-gray-900 dark:bg-gray-950 dark:border-gray-800 dark:focus:border-gray-50 dark:focus:ring-gray-50">
+                <SelectTrigger className="w-full pl-10 pr-4 py-2 rounded-md bg-white shadow-sm hover:border-blue-600 focus:ring-blue-700 focus:ring-1 focus:ring-offset-0 transition-colors dark:bg-gray-950 dark:border-blue-50 dark:focus:border-blue-100 dark:focus:ring-blue-200">
                   <SelectValue placeholder="Location" />
                 </SelectTrigger>
                 <SelectContent>
                   <SelectGroup>
-                    <SelectItem className="cursor-pointer" value="new-york">New York</SelectItem>
-                    <SelectItem className="cursor-pointer" value="san-francisco">San Francisco</SelectItem>
-                    <SelectItem className="cursor-pointer" value="london">London</SelectItem>
-                    <SelectItem className="cursor-pointer" value="tokyo">Tokyo</SelectItem>
+                    <SelectItem className="cursor-pointer" value="new-york">
+                      New York
+                    </SelectItem>
+                    <SelectItem
+                      className="cursor-pointer"
+                      value="san-francisco"
+                    >
+                      San Francisco
+                    </SelectItem>
+                    <SelectItem className="cursor-pointer" value="london">
+                      London
+                    </SelectItem>
+                    <SelectItem className="cursor-pointer" value="tokyo">
+                      Tokyo
+                    </SelectItem>
                   </SelectGroup>
                 </SelectContent>
               </Select>
@@ -60,13 +79,17 @@ export default function EventsHeader() {
             <div className="relative">
               <CalendarIcon className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500 dark:text-gray-400" />
               <Select>
-                <SelectTrigger className="w-full pl-10 pr-4 py-2 rounded-md bg-white shadow-sm border border-gray-200 focus:border-gray-900 focus:ring-gray-900 dark:bg-gray-950 dark:border-gray-800 dark:focus:border-gray-50 dark:focus:ring-gray-50">
+                <SelectTrigger className="w-full pl-10 pr-4 py-2 rounded-md bg-white shadow-sm hover:border-blue-600 focus:ring-blue-700 focus:ring-1 focus:ring-offset-0 transition-colors  dark:bg-gray-950 dark:border-blue-50 dark:focus:border-blue-100 dark:focus:ring-blue-200">
                   <SelectValue placeholder="Event Type" />
                 </SelectTrigger>
                 <SelectContent>
                   <SelectGroup>
-                    <SelectItem className="cursor-pointer" value="remote">Remote</SelectItem>
-                    <SelectItem className="cursor-pointer" value="in-person">In-Person</SelectItem>
+                    <SelectItem className="cursor-pointer" value="remote">
+                      Remote
+                    </SelectItem>
+                    <SelectItem className="cursor-pointer" value="in-person">
+                      In-Person
+                    </SelectItem>
                   </SelectGroup>
                 </SelectContent>
               </Select>

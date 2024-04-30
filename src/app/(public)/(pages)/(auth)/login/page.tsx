@@ -4,11 +4,11 @@ import Link from "next/link";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "SignUp",
+  title: "Login",
 };
 export default function Login() {
   return (
-    <div className="mx-auto my-16 max-w-[300px] space-y-6 py-12 lg:py-24 h-96">
+    <div className="mx-auto my-16 max-w-[500px] space-y-6 py-16  px-16 border rounded-3xl">
       <div className="space-y-2 py-4 text-center">
         <h1 className="text-3xl font-bold">Log In</h1>
         <p className="text-gray-500 dark:text-gray-400">
@@ -21,9 +21,26 @@ export default function Login() {
           variant="outline"
         >
           <GoogleIcon className="h-5 w-5 mr-2" />
-          Log In with Google
+          Login with Google
+        </Button>
+        <Button
+          className="w-full shadow-sm hover:shadow-md transition-all"
+          variant="outline"
+        >
+          <LinkedInIcon className="h-5 w-5 mr-2" />
+          Login with LinkedIn
         </Button>
       </div>
+      <p className="text-xs text-gray-500 dark:text-gray-400 mt-10">
+        By clicking Continue, you agree to {"Workshopify's "}
+        <Link
+          className="underline underline-offset-2 leading-4 text-blue-600 hover:text-gray-900 dark:hover:text-gray-50"
+          href="#"
+        >
+          User Agreement, Privacy Policy, and Cookie Policy
+        </Link>
+        .
+      </p>
       {/* <div className="mt-4 text-center text-sm">
         Already have an account?
         <Link className="underline" href="#">
@@ -58,6 +75,24 @@ function GoogleIcon(props: any) {
       <path
         d="M12.2549 4.75C14.0249 4.75 15.6049 5.36 16.8549 6.55L20.2749 3.13C18.2049 1.19 15.4949 0 12.2549 0C7.56492 0 3.51492 2.7 1.54492 6.62L5.52492 9.71C6.47492 6.86 9.12492 4.75 12.2549 4.75Z"
         fill="#EA4335"
+      ></path>
+    </svg>
+  );
+}
+
+function LinkedInIcon(props: any) {
+  return (
+    <svg
+      {...props}
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M20.25 0H3.75C1.677 0 0 1.677 0 3.75V20.25C0 22.323 1.677 24 3.75 24H20.25C22.323 24 24 22.323 24 20.25V3.75C24 1.677 22.323 0 20.25 0ZM7.5 20.25H4.5V9H7.5V20.25ZM6 7.5C5.1725 7.5 4.5 6.8275 4.5 6C4.5 5.1725 5.1725 4.5 6 4.5C6.8275 4.5 7.5 5.1725 7.5 6C7.5 6.8275 6.8275 7.5 6 7.5ZM21 20.25H18V14.25C18 12.75 17.25 11.25 15.75 11.25C14.25 11.25 13.5 12.75 13.5 14.25V20.25H10.5V9H13.5V10.5C14.25 9 15.75 7.5 18 7.5C21 7.5 21 10.5 21 12V20.25Z"
+        fill="#0077B5"
       ></path>
     </svg>
   );

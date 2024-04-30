@@ -6,7 +6,7 @@ import MeetUps from "./components/meetup";
 import HowItWorksCards from "./components/howItWorks";
 import ComingSoon from "./components/comingSoon";
 import CookieModal from "./components/cookieModal";
-import AddEvent from "./components/addEvent/addEvent";
+import AddEvent from "./components/forms/addEvent";
 
 export default function Home() {
   return (
