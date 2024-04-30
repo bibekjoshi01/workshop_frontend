@@ -18,13 +18,13 @@ export default function Hero() {
           </div>
           <div className="mt-8 flex flex-col items-center  md:flex-row md:justify-center gap-4 ">
             <Link
-              className="inline-flex md:h-16 items-center justify-center rounded-lg bg-gray-900 px-8 py-4 text-sm font-medium text-gray-50 shadow hover:shadow-sm transition-all hover:bg-gray-900/90 hover:scale-95 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300"
+              className="inline-flex md:h-16 items-center justify-center rounded-md bg-gray-900 px-8 py-4 text-sm font-medium text-gray-50 shadow hover:shadow-sm transition-all hover:bg-gray-900/90 hover:scale-[0.98] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300"
               href="#"
             >
               Post a Event
             </Link>
             <Link
-              className="inline-flex md:h-16 items-center justify-center rounded-lg border border-gray-200 bg-white px-8 py-4 text-sm font-medium shadow-sm transition-all hover:bg-gray-100 hover:scale-95 hover:text-gray-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:border-gray-800 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus-visible:ring-gray-300"
+              className="inline-flex md:h-16 items-center justify-center rounded-md border border-gray-200 bg-white px-8 py-4 text-sm font-medium shadow-sm transition-all hover:border-gray-400 hover:scale-[0.98] hover:text-gray-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:border-gray-800 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus-visible:ring-gray-300"
               href="#"
             >
               Browse Events

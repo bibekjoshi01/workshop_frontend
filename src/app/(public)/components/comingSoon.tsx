@@ -18,11 +18,14 @@ export default function ComingSoon() {
           </p>
           <div className="flex flex-col sm:flex-row justify-between gap-4 space-x-2 py-8">
             <Input
-              className="flex-1 border-2 py-6 sm:py-8 sm:px-6  rounded-3xl shadow-sm"
+              className="flex-1 border py-6 sm:py-8 sm:px-6 rounded-3xl shadow-sm bg-white hover:border-blue-400 focus:ring-blue-500 focus:ring-1 focus:ring-offset-0 transition-colors  dark:bg-gray-950 dark:border-blue-50 dark:focus:border-blue-100 dark:focus:ring-blue-200"
               placeholder="Enter your email"
               type="email"
             />
-            <Button className="py-8 px-10 sm:py-8 sm:px-16 rounded-3xl hover:scale-95 hover:shadow-md shadow-sm transition-all" type="submit">
+            <Button
+              className="py-8 px-10 sm:py-8 sm:px-16 rounded-3xl hover:scale-95 hover:shadow-md shadow-sm transition-all"
+              type="submit"
+            >
               Notify Me
             </Button>
           </div>
