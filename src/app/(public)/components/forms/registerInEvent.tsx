@@ -22,9 +22,9 @@ export default function RegisterInEvent() {
           <Label htmlFor="linkedin">LinkedIn Profile</Label>
           <Input id="linkedin" placeholder="Enter your LinkedIn profile URL" required type="url" />
         </div>
-        {/* <Button className="w-full" type="submit">
+        <Button className="w-full" type="submit">
           Register
-        </Button> */}
+        </Button>
       </div>
     </div>
   )
