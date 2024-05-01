@@ -73,8 +73,7 @@
   body {
     @apply bg-background text-foreground;
   }
-
-  body::-webkit-scrollbar {
+  body::-webkit-scrollbar,.hideScrollbar::-webkit-scrollbar {
     display: none;
   }
 }
