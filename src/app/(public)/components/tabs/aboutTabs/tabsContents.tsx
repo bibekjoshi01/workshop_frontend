@@ -2,8 +2,8 @@ import ContactInfo from "./contact info";
 import LifeEvents from "./life events";
 import Moredetails from "./more details";
 import Overview from "./overview";
-import PlacesLived from "./places lived";
-import WorkAndEducation from "./work and education";
+// import PlacesLived from "./places lived";
+// import WorkAndEducation from "./work and education";
 
 export default function TabsContents() {
   return (
@@ -12,8 +12,8 @@ export default function TabsContents() {
       <LifeEvents />
       <Moredetails />
       <Overview />
-      <PlacesLived />
-      <WorkAndEducation />
+      {/* <PlacesLived /> */}
+      {/* <WorkAndEducation /> */}
     </div>
   );
 }

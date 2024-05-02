@@ -14,6 +14,50 @@ export default function Intro({
 }: {
   insideOverView?: boolean;
 }) {
+  interface userIntroType {
+    id: number;
+    title: string;
+    values: string[];
+  }
+  const userIntro: userIntroType[] = [
+    { id: 0, title: "Working at", values: ["Infosys"] },
+    { id: 1, title: "Worked at", values: ["Microsoft","Google"] },
+    {
+      id: 2,
+      title: "Studies at",
+      values: ["Institute of Engineering, Thapathali Campus"],
+    },
+    {
+      id: 3,
+      title: "Studied at",
+      values: [
+        "Little Buddha Academy, Mahendranagar",
+        "Shree Mahakali Secondary School",
+      ],
+    },
+    {
+      id: 4,
+      title: "Currently living in",
+      values: ["Kathmandu, Nepal"],
+    },
+    {
+      id: 5,
+      title: "From",
+      values: ["Mahendranagar, Nepal"],
+    },
+    {
+      id: 6,
+      title: "❤️",
+      values: ["Single"],
+    },
+    {
+      id: 7,
+      title: "Quote",
+      values: [
+        "“In three words I can sum up everything I've learned about life: it goes on.” - Robert Frost ❤️❤️",
+      ],
+    },
+  ];
   return (
     <Card className="bg-white rounded-lg shadow-md dark:bg-gray-800 dark:text-gray-200 ">
       <div className="flex items-baseline justify-between w-full">
@@ -39,78 +83,84 @@ export default function Intro({
         </DropdownMenu>
       </div>
 
-      {!insideOverView && <CardHeader className="flex items-center p-3 border-b dark:border-gray-700">
-        {/* <Avatar className="w-8 h-8">
-          <AvatarImage alt="Manish" src="/userImage.jpg" />
-          <AvatarFallback>MJ</AvatarFallback>
-        </Avatar> */}
-        <div className="ml-2 flex-1 ">
-          <div className="font-medium text-sm">
-            {`“In three words I can sum up everything I've learned about life: it
-            goes on.”`}
-            <p className="text-end py-2"> ― Robert Frost ❤️❤️</p>
-          </div>
-        </div>
-      </CardHeader>}
+      {/* Only show quote is in intro of posts and not inside overview of about tab */}
+      {!insideOverView && (
+        <CardHeader className="flex items-center p-3 border-b dark:border-gray-700">
+          <div className="ml-2 flex-1 ">
+            <div className="font-medium text-sm">
+              {/* Insert dynamic quote and author */}
 
+              {userIntro.map(
+                (item) =>
+                  item.title.toLowerCase() === "quote" && (
+                    <div key={item.id}>
+                      {item.values.map((quote, index) => (
+                        <p className="text-start" key={index}>
+                          {quote}
+                        </p>
+                      ))}
+                    </div>
+                  )
+              )}
+            </div>
+          </div>
+        </CardHeader>
+      )}
+
+      {/* show every thing except quote */}
       <CardContent className="p-3">
-        <div className="space-y-2">
-          <div className="flex items-center space-x-2 py-1">
-            <MdOutlineComputer className="w-4 h-4 text-gray-500 dark:text-gray-400" />
-            <p className="text-sm cursor-pointer">
-              Working at
-              <span className="font-semibold hover:underline "> Infosys</span>
-            </p>
-          </div>
-          <div className="flex items-center space-x-2 py-1">
-            <SchoolIcon className="w-4 h-4 text-gray-500 dark:text-gray-400" />
-            <p className="text-sm cursor-pointer">
-              Studies at
-              <span className="font-semibold hover:underline ">
-                {" "}
-                Institute of Engineering, Thapathali Campus
-              </span>
-            </p>
-          </div>
-          <div className="flex items-center space-x-2 py-1">
-            <SchoolIcon className="w-4 h-4 text-gray-500 dark:text-gray-400" />
-            <p className="text-sm cursor-pointer">
-              Studied at{" "}
-              <span className="font-semibold hover:underline ">
-                {" "}
-                Radiant Secondary School, Mahendranagar
-              </span>
-            </p>
-          </div>
-          <div className="flex items-center space-x-2 py-1">
-            <LocateIcon className="w-4 h-4 text-gray-500 dark:text-gray-400" />
-            <p className="text-sm cursor-pointer">
-            Currently living in{" "}
-              <span className="font-semibold hover:underline ">
-                {" "}
-                Kathmandu, Nepal
-              </span>
-            </p>
-          </div>
-          <div className="flex items-center space-x-2 py-1">
-            <LocateIcon className="w-4 h-4 text-gray-500 dark:text-gray-400" />
-            <p className="text-sm cursor-pointer">
-              From{" "}
-              <span className="font-semibold hover:underline ">
-                {" "}
-                Mahendranagar, Nepal
-              </span>
-            </p>
-          </div>
-
-          <div className="flex items-center space-x-2 py-1">
-            <span>❤️</span>
-            <p className="text-sm">Single</p>
-          </div>
+        <div className="space-y-2 ">
+          {userIntro.map(
+            (intro) =>
+              // to show items which is not a quote
+              intro.title.toLowerCase() !== "quote" && (
+                <div key={intro.id} className="py-1 grid gap-4">
+                  {/* FIXME HOW TO STORE ICONS*/}
+                  {intro.values.map((value, index) => (
+                    <div className="flex " key={index}>
+                      <p className="mr-2">{getIcon(intro.title)}</p>
+                      <p className="text-sm cursor-pointer" key={intro.id}>
+                        {intro.title}{" "}
+                        <span className="font-semibold hover:underline ">
+                          {value}
+                        </span>
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              )
+          )}
         </div>
       </CardContent>
     </Card>
   );
+}
+// Function to determine the icon based on the title
+function getIcon(title: string) {
+  switch (title.toLowerCase()) {
+    case "working at":
+    case "worked at":
+      return (
+        <MdOutlineComputer className="w-4 h-4 text-gray-500 dark:text-gray-400" />
+      );
+    case "studies at":
+    case "studied at":
+      return (
+        <SchoolIcon className="w-4 h-4 text-gray-500 dark:text-gray-400" />
+      );
+    case "currently living in":
+    case "from":
+      return (
+        <LocateIcon className="w-4 h-4 text-gray-500 dark:text-gray-400" />
+      );
+    case "single":
+    case "married":
+    case "in a relationship":
+    case "its complicated":
+      return <span>❤️</span>;
+    default:
+      return null; // Return null if no icon is found
+  }
 }
 
 function LocateIcon(props: any) {

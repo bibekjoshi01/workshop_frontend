@@ -1,4 +1,3 @@
-import { AvatarImage, AvatarFallback, Avatar } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenuTrigger,
@@ -6,11 +5,28 @@ import {
   DropdownMenuContent,
   DropdownMenu,
 } from "@/components/ui/dropdown-menu";
-import { CardHeader, CardContent, Card } from "@/components/ui/card";
+import { CardContent, Card } from "@/components/ui/card";
 
 export default function MoreDetailscard() {
+  interface moreDetails {
+    id: number;
+    title: string;
+    value: string;
+  }
+  const moreDetails: moreDetails[] = [
+    {
+      id: 1,
+      title: "Nickname",
+      value: "mannu",
+    },
+    {
+      id: 2,
+      title: "Favourite Quote",
+      value: `“Yesterday is history. Tomorrow is a mystery. But today is a gift, and that is why it’s called the present.”`,
+    },
+  ];
   return (
-    <Card className="bg-white rounded-lg shadow-md dark:bg-gray-800 dark:text-gray-200 ">
+    <Card className="bg-white rounded-lg shadow-md dark:bg-gray-800 dark:text-gray-200 py-4 ">
       <div className="flex items-baseline justify-between w-full">
         <h1 className="text-start text-2xl p-4 font-semibold">More about me</h1>
 
@@ -33,40 +49,20 @@ export default function MoreDetailscard() {
         </DropdownMenu>
       </div>
 
-      {/* <CardHeader className="flex items-center p-3 border-b dark:border-gray-700">
-        <Avatar className="w-8 h-8">
-          <AvatarImage alt="Manish" src="/userImage.jpg" />
-          <AvatarFallback>MJ</AvatarFallback>
-        </Avatar>
-        <div className="ml-2 flex-1 ">
-          <div className="font-medium text-sm">
-            {`“Without ambition one starts nothing. Without work one finishes nothing. The prize will not be sent to you. You have to win it.”`}
-            <p className="text-end py-2"> ―– Ralph Waldo Emerson ❤️❤️</p>
-          </div>
-        </div>
-      </CardHeader> */}
-
       <CardContent className="p-3">
         <div className="space-y-2">
-          <h1 className="text-start text-xl py-4 font-semibold">Nickname</h1>
-          <div className="flex items-center space-x-2 py-1">
-            <p className="text-sm cursor-pointer">
-              People love to call me{" "}
-              <span className="font-semibold hover:underline "> Mannu</span>
-            </p>
-          </div>
-          <h1 className="text-start text-xl py-4 font-semibold">
-            Favourite Quote
-          </h1>
-          <div className="flex items-center space-x-2 py-1">
-            <p className="text-sm cursor-pointer">
-              <span className="font-semibold hover:underline ">
-                {" "}
-                {`“Yesterday is history. Tomorrow is a mystery. But today is a gift, and that is why it’s called the present.”`}
-              </span>
-              <p className="text-end py-2"> ― Joan Rivers ❤️❤️</p>
-            </p>
-          </div>
+          {moreDetails.map((moreDetail) => (
+            <div key={moreDetail.id}>
+              <h1 className="text-start text-xl py-4 font-semibold">
+                {moreDetail.title}
+              </h1>
+              <div className="flex items-center space-x-2 py-1">
+                <p className="text-sm cursor-pointer font-medium ">
+                  {moreDetail.value}
+                </p>
+              </div>
+            </div>
+          ))}
         </div>
       </CardContent>
     </Card>

@@ -8,7 +8,7 @@ import { FcCamera } from "react-icons/fc";
 export default function UserProfile() {
   return (
     <>
-      <div className="container mx-auto px-0  md:h-[60vh] h-[20rem] ">
+      <div className="container mx-auto px-0  md:h-[60vh] h-[20rem] max-h-[35rem]">
         <Image
           alt="User Cover Image"
           className="h-full w-full object-cover rounded-b-xl"
@@ -22,7 +22,7 @@ export default function UserProfile() {
       </div>
       <div className="container relative mx-auto pb-16 flex flex-col items-center gap-6 md:flex-row md:items-start md:gap-10 ">
         {/* user image */}
-        <div className="absolute h-[140px] w-[140px] md:h-[180px]  md:w-[180px] -top-16">
+        <div className="absolute h-[140px] w-[140px] md:h-[180px]  md:w-[180px]  -top-16">
           <Image
             alt="User Avatar"
             className="h-full w-full rounded-full object-cover"

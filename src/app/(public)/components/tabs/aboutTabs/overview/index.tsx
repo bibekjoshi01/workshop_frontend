@@ -1,5 +1,6 @@
+import Intro from "@/app/(public)/(pages)/MyProfile/posts/introCard";
 import { TabsContent } from "@/components/ui/tabs";
-import Intro from "../../profileTabs/posts/itroCard";
+
 
 export default function Overview() {
   return (
