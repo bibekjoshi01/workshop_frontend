@@ -20,7 +20,7 @@ const openSans = Open_Sans({
   subsets: ["latin"],
 });
 
-export default function RootLayout({
+export default function Layout({
   children,
 }: {
   children: React.ReactNode;
