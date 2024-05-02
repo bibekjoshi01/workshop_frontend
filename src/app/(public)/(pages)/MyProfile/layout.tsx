@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Inter, Open_Sans } from "next/font/google";
 import "../../../globals.css";
 import UserProfile from "./userProfile";
-import ProfileTabs from "../../components/tabs/profileTabs";
 import TabLits from "./tablist";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -33,8 +32,7 @@ export default function RootLayout({
         <div className="container my-6 md:my-0 mx-auto border-b px-0 p-1 text-muted-foreground overscroll-x-scroll hideScrollbar">
             <TabLits />
         </div>
-        <div className="container mx-auto">{children}</div>
-        {/* <ProfileTabs>{children}</ProfileTabs> */}
+        <div className="container mx-auto bg-gray-50 dark:bg-gray-800 dark:text-white">{children}</div>
       </div>
     </div>
   );

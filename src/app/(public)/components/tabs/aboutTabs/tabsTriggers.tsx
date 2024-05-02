@@ -14,24 +14,24 @@ export default function TabsTriggers() {
       >
         Contact Info
       </TabsTrigger>
-      <TabsTrigger
+      {/* <TabsTrigger
         className="py-4 w-full justify-start text-sm  font-semibold text-gray-500 hover:text-gray-900 hover:bg-gray-200 dark:hover:bg-gray-700 transition-all data-[state=active]:bg-blue-50 data-[state=active]:text-blue-600 dark:text-gray-50 dark:data-[state=active]:text-white  dark:data-[state=active]:bg-gray-800"
         value="work-and-education"
       >
         Work and Education
-      </TabsTrigger>
+      </TabsTrigger> */}
       <TabsTrigger
         className="py-4 w-full justify-start text-sm  font-semibold text-gray-500 hover:text-gray-900 hover:bg-gray-200 dark:hover:bg-gray-700 transition-all data-[state=active]:bg-blue-50 data-[state=active]:text-blue-600 dark:text-gray-50 dark:data-[state=active]:text-white  dark:data-[state=active]:bg-gray-800"
         value="life-events"
       >
         Life Events
       </TabsTrigger>
-      <TabsTrigger
+      {/* <TabsTrigger
         className="py-4 w-full justify-start text-sm  font-semibold text-gray-500 hover:text-gray-900 hover:bg-gray-200 dark:hover:bg-gray-700 transition-all data-[state=active]:bg-blue-50 data-[state=active]:text-blue-600 dark:text-gray-50 dark:data-[state=active]:text-white  dark:data-[state=active]:bg-gray-800"
         value="places-lived"
       >
         Places Lived
-      </TabsTrigger>
+      </TabsTrigger> */}
 
       <TabsTrigger
         className="py-4 w-full justify-start text-sm  font-semibold text-gray-500 hover:text-gray-900 hover:bg-gray-200 dark:hover:bg-gray-700 transition-all data-[state=active]:bg-blue-50 data-[state=active]:text-blue-600 dark:text-gray-50 dark:data-[state=active]:text-white  dark:data-[state=active]:bg-gray-800"
