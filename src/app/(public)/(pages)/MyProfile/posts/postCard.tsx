@@ -13,7 +13,7 @@ export default function PostCard() {
     <div className="bg-white rounded-lg shadow-md dark:bg-gray-800 dark:text-gray-200 ">
       <div className="flex items-center p-3 border-b dark:border-gray-700">
         <Avatar className="w-8 h-8 cursor-pointer">
-          <AvatarImage alt="Jane Doe" src="/placeholder-avatar.jpg" />
+          <AvatarImage alt="Jane Doe" src="/userImage.png" />
           <AvatarFallback>MJ</AvatarFallback>
         </Avatar>
         <div className="ml-2 flex-1">
