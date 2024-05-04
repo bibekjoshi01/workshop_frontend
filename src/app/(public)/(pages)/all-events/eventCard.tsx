@@ -9,7 +9,7 @@ import { BsCalendar2Date } from "react-icons/bs";
 import { formatDate } from "../../utils/formatEventTime";
 import { formatNumberOfAttendees } from "../../utils/formatNumber";
 
-export default function EventCard({ event, handleRegister }: any) {
+export default function EventCard({ event, handleRegister, handleLearnMore }: any) {
   return (
     <div className="relative rounded-lg overflow-hidden shadow-lg">
       <Image
@@ -60,6 +60,7 @@ export default function EventCard({ event, handleRegister }: any) {
           <Button
             variant="graybg"
             className="hover:scale-95 transition-transform text-sm font-medium"
+            onClick={handleLearnMore}
           >
             View Details
           </Button>

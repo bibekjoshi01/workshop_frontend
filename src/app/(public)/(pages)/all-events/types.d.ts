@@ -11,3 +11,4 @@ interface eventDataTypes {
     duration: string;
     noOfAttendees: string;
   }
+  
