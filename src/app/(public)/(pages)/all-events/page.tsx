@@ -4,12 +4,17 @@ import ConfirmRegistration from "../../components/modal/confirmRegistration";
 import EventPagination from "./eventPagination";
 import EventsHeader from "./eventsHeader";
 import EventCard from "./eventCard";
+import { useRouter } from "next/navigation";
 
 export default function AllEvents() {
   const [openRegisterModal, setOpenRegisterModal] = useState(false);
+  const router = useRouter();
 
   const handleRegister = () => {
     setOpenRegisterModal(true);
+  };
+  const handleLearnMore = (event: eventDataTypes) => {
+    router.push("/all-events/" + event.slug)
   };
 
   const evenData: eventDataTypes[] = [
@@ -84,6 +89,7 @@ export default function AllEvents() {
                   key={event?.uuid}
                   event={event}
                   handleRegister={handleRegister}
+                  handleLearnMore={() => handleLearnMore(event)}
                 />
               ))}
             </div>
