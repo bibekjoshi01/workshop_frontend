@@ -10,10 +10,10 @@ import {
 
 export default function EventsHeader() {
   return (
-    <section className="w-full py-4 md:py-6 lg:py-8 border-b container ">
+    <section className="w-full py-2 md:py-6">
       <div className="container px-4 md:px-6">
         <div className="space-y-4">
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-3xl md:text-4xl">
             All Events
           </h2>
           <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-4">
