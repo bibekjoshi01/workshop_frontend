@@ -1,22 +1,8 @@
-"use client";
-import { useState } from "react";
-import ConfirmRegistration from "../../components/modal/confirmRegistration";
 import EventPagination from "./eventPagination";
 import EventsHeader from "./eventsHeader";
 import EventCard from "./eventCard";
-import { useRouter } from "next/navigation";
-
+import AllEventsSkeleton from "../../components/skeleton/all-events-skeleton";
 export default function AllEvents() {
-  const [openRegisterModal, setOpenRegisterModal] = useState(false);
-  const router = useRouter();
-
-  const handleRegister = () => {
-    setOpenRegisterModal(true);
-  };
-  const handleLearnMore = (event: eventDataTypes) => {
-    router.push("/all-events/" + event.slug)
-  };
-
   const evenData: eventDataTypes[] = [
     {
       uuid: "3fa85f64-5717-4262-b3fc-2c963f66afa6",
@@ -74,29 +60,21 @@ export default function AllEvents() {
   ];
 
   return (
-    <>
-      <EventsHeader />
-      <ConfirmRegistration
-        open={openRegisterModal}
-        close={() => setOpenRegisterModal(false)}
-      />
-      <section className="w-full py-2 md:py-6">
-        <div className="container px-4 md:px-6">
-          <div className="space-y-4">
-            <div className="grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-              {evenData.map((event) => (
-                <EventCard
-                  key={event?.uuid}
-                  event={event}
-                  handleRegister={handleRegister}
-                  handleLearnMore={() => handleLearnMore(event)}
-                />
-              ))}
+      <>
+        <EventsHeader />
+        <section className="w-full py-2 md:py-6">
+          <div className="container px-4 md:px-6">
+            <div className="space-y-4">
+              <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                {evenData.map((event) => (
+                  <EventCard key={event?.uuid} event={event} />
+                ))}
+              </div>
             </div>
           </div>
-        </div>
-        <EventPagination />
-      </section>
-    </>
+          <EventPagination />
+        </section>
+      </>
+  
   );
 }

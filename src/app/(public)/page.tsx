@@ -12,7 +12,7 @@ export default function Home() {
       <Hero />
       <MeetUps />
       <HowItWorksCards />
-      <ComingSoon />
+      {/* <ComingSoon /> */}
 
       {/* <CookieModal /> */}
       {/* <Button size={"lg"} variant={"outline"} >

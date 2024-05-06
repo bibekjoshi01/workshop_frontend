@@ -1,15 +1,3 @@
-// export default function Event({
-//   params: { slug },
-// }: {
-//   params: { slug: string };
-// }) {
-//   return (
-//     <>
-//       <h1>Event Page </h1>
-//       <p>{slug}</p>
-//     </>
-//   );
-// }
 import {
   DropdownMenuTrigger,
   DropdownMenuItem,
@@ -22,10 +10,14 @@ import { GiDuration } from "react-icons/gi";
 import { BsCalendar2Date } from "react-icons/bs";
 import { FiUsers } from "react-icons/fi";
 import { CiMicrophoneOn } from "react-icons/ci";
+import AttendButton from "./AttendButton";
 
 export default function Event() {
   return (
+    <>
+   
     <div className=" container mx-auto flex flex-col items-center space-y-8 px-4 py-6 md:px-6 md:py-12 lg:flex-row lg:justify-center lg:space-y-0 lg:space-x-8 mb-">
+      
       <div className="flex flex-col space-y-4 w-full max-w-3xl ">
         <Image
           alt="Chess pieces"
@@ -43,7 +35,7 @@ export default function Event() {
             In this The DAVID & GOLIATH framework for growing a Service-based
             business.
           </h2>
-          <p className="text-sm text-black my-2">
+          <p className="text-sm font-medium text-black my-2">
             Event by <span> Obi Umenze (Cobe)</span>
           </p>
           <p className="text-sm text-black flex items-center gap-2 my-1">
@@ -64,12 +56,8 @@ export default function Event() {
               <FiUsers size={15} /> 9,220 attendees
             </p>
             <div className="flex space-x-2">
-              <Button
-                variant="default"
-                className="p-6 hover:scale-95 transition-all"
-              >
-                Attend
-              </Button>
+              {/* need to use useState inside this button */}
+              <AttendButton />
               <Button
                 variant="outline"
                 className="p-6 hover:scale-95 transition-all"
@@ -124,7 +112,10 @@ export default function Event() {
           <h3 className="text-lg font-semibold">
             Host an event on Workshopify and invite your network
           </h3>
-          <Button className=" mt-4 mb-2" variant="default">
+          <Button
+            className=" mt-4 mb-2 p-6 hover:scale-95 transition-all"
+            variant="default"
+          >
             Create event
           </Button>
         </div>
@@ -155,11 +146,12 @@ export default function Event() {
                 <p className="text-xs text-gray-500">Mobility Makers</p>
               </div>
             </div>
-
           </div>
         </div>
       </div>
     </div>
+    </>
+
   );
 }
 
