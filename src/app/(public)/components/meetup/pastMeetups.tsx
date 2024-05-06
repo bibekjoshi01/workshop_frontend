@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 export default function PastMeetUps() {
   return (
     <>
-<section className="w-full py-12 md:py-24 lg:py-32 dark:bg-gray-800">
+<section className="w-full py-12 md:py-16 bg-gradient-to-r from-[#f3f4f6] to-[#e5e7eb] dark:from-[#1f2937] dark:to-[#111827]">
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">

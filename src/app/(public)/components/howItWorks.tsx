@@ -1,6 +1,6 @@
 export default function HowItWorksCards() {
   return (
-    <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-r from-[#f3f4f6] to-[#e5e7eb] dark:from-[#1f2937] dark:to-[#111827]">
+    <section className="w-full py-12 md:py-24 lg:py-32 ">
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center space-y-10 text-center">
           <div className="space-y-2">

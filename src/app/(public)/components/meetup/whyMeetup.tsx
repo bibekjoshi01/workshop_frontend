@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function WhyMeetUp() {
   return (
-    <section className="w-full py-6 md:py-8 lg:py-10 bg-gradient-to-r from-[#f3f4f6] to-[#e5e7eb] dark:from-[#1f2937] dark:to-[#111827]">
+    <section className="w-full py-6 md:py-8 lg:py-10 mb-10">
       <div className="container grid items-center gap-6 px-4 pt-12 md:grid-cols-[1fr_500px] md:px-6 lg:gap-12 xl:grid-cols-[1fr_550px]">
         <Image
           alt="Meetups"
@@ -25,16 +25,16 @@ export default function WhyMeetUp() {
               happening in your local community and around the world.
             </p>
           </div>
-          <div className="flex flex-col gap-2 min-[400px]:flex-row">
+          <div className="flex flex-col gap-4 min-[400px]:flex-row py-8">
             <Link
-              className="inline-flex h-10 items-center justify-center rounded-md bg-gray-900 px-8 py-6  hover:scale-95 text-sm font-medium text-gray-50 shadow transition-transform hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300"
+              className="inline-flex h-10 items-center justify-center rounded-md bg-gray-900 px-9 py-8  hover:scale-95 text-sm font-medium text-gray-50 shadow transition-transform hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300"
               href="#"
             >
               Post Event
             </Link>
             <Link
-              className="inline-flex h-10 items-center justify-center rounded-md border border-gray-300  hover:bg-gray-50 bg-white hover:text-accent-foreground px-8 py-6 hover:scale-95 text-sm font-medium shadow-sm hover:text-gray-900 transition-transform focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:border-gray-800 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus-visible:ring-gray-300"
-              href="#"
+              className="inline-flex h-10 items-center justify-center rounded-md border border-gray-300  hover:bg-gray-50 bg-white hover:text-accent-foreground px-9 py-8 hover:scale-95 text-sm font-medium shadow-sm hover:text-gray-900 transition-transform focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:border-gray-800 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus-visible:ring-gray-300"
+              href="/all-events"
             >
               Browse Events
             </Link>
