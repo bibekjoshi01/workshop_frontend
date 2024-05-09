@@ -21,13 +21,13 @@ export default function Hero() {
           <div className="mt-8 flex flex-col items-center  md:flex-row md:justify-center gap-6 py-4">
             <Link
               className="inline-flex md:h-16 items-center justify-center rounded-md bg-gray-900 px-8 py-4 text-sm font-medium text-gray-50 shadow hover:shadow-sm transition-all hover:bg-gray-900/90 hover:scale-[0.98] hover:translate-y-0.5 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300"
-              href="#"
+              href="add-event"
             >
               Post a Event
             </Link>
             <Link
               className="inline-flex md:h-16 items-center justify-center rounded-md border border-gray-200 bg-white px-8 py-4 text-sm font-medium shadow-sm transition-all hover:border-gray-400 hover:scale-[0.98] hover:translate-y-0.5 hover:text-gray-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:border-gray-800 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus-visible:ring-gray-300"
-              href="/all-events"
+              href="/events"
             >
               Browse Events
             </Link>

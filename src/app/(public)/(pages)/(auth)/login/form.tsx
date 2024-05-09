@@ -1,38 +1,37 @@
+"use client";
+import { Button } from "@/components/ui/button";
 import React, { MouseEventHandler } from "react";
-import Link from "next/link";
-import { Metadata } from "next";
-import { LoginForm } from "./form";
+import { useGoogleLogin } from "@react-oauth/google";
 
-export const metadata: Metadata = {
-  title: "Login",
-};
-
-export default function Login() {
+export function LoginForm() {
+  const responseGoogle = useGoogleLogin({
+    onSuccess: async (tokenResponse) => {
+      try {
+        // FIXME - This is a placeholder for the actual login logic
+        console.log(tokenResponse, "token");
+      } catch (error: any) {
+        console.log(error?.response?.data?.detail);
+      }
+    },
+  });
   return (
-    <div className="mx-auto my-16 max-w-[500px] space-y-6 py-16  px-16 border rounded-3xl">
-      <div className="space-y-2 py-4 text-center">
-        <h1 className="text-3xl font-bold">Log In</h1>
-        <p className="text-gray-500 dark:text-gray-400">
-          Login to your account to continue
-        </p>
-      </div>
-      <LoginForm />
-      <p className="text-xs text-gray-500 dark:text-gray-400 mt-10">
-        By clicking Continue, you agree to {"Workshopify's "}
-        <Link
-          className="underline underline-offset-2 leading-4 text-blue-600 hover:text-gray-900 dark:hover:text-gray-50"
-          href="#"
-        >
-          User Agreement, Privacy Policy, and Cookie Policy
-        </Link>
-        .
-      </p>
-      {/* <div className="mt-4 text-center text-sm">
-        Already have an account?
-        <Link className="underline" href="#">
-          Login
-        </Link>
-      </div> */}
+    <div className="space-y-4">
+      <Button
+        className="w-full shadow-sm hover:shadow-md transition-all"
+        variant="outline"
+        type="submit"
+        onClick={responseGoogle as MouseEventHandler<HTMLButtonElement>}
+      >
+        <GoogleIcon className="h-5 w-5 mr-2" />
+        Login with Google
+      </Button>
+      <Button
+        className="w-full shadow-sm hover:shadow-md transition-all"
+        variant="outline"
+      >
+        <LinkedInIcon className="h-5 w-5 mr-2" />
+        Login with LinkedIn
+      </Button>
     </div>
   );
 }

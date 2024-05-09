@@ -16,7 +16,7 @@ export default function EventCard({ event }: { event: eventDataTypes }) {
   const router = useRouter();
 
   const handleLearnMore = (event: eventDataTypes) => {
-    router.push("/all-events/" + event.slug);
+    router.push("/events/" + event.slug);
   };
   return (
     <div className="relative rounded-xl overflow-hidden border shadow-sm">
