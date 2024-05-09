@@ -1,6 +1,6 @@
 "use client";
 import { Button } from "@/components/ui/button";
-import ConfirmRegistration from "./../../../components/modal/confirmRegistration";
+import ConfirmRegistration from "../../../components/modal/confirmRegistration";
 import { useState } from "react";
 
 export default function AttendButton() {
