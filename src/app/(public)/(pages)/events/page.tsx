@@ -1,7 +1,7 @@
 import EventPagination from "./eventPagination";
 import EventsHeader from "./eventsHeader";
 import EventCard from "./eventCard";
-import AllEventsSkeleton from "../../components/skeleton/all-events-skeleton";
+
 export default function AllEvents() {
   const evenData: eventDataTypes[] = [
     {
@@ -60,21 +60,20 @@ export default function AllEvents() {
   ];
 
   return (
-      <>
-        <EventsHeader />
-        <section className="w-full py-2 md:py-6">
-          <div className="container px-4 md:px-6">
-            <div className="space-y-4">
-              <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-                {evenData.map((event) => (
-                  <EventCard key={event?.uuid} event={event} />
-                ))}
-              </div>
+    <>
+      <EventsHeader />
+      <section className="w-full py-2 md:py-6">
+        <div className="container px-4 md:px-6">
+          <div className="space-y-4">
+            <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+              {evenData.map((event: any) => (
+                <EventCard key={event?.uuid} event={event} />
+              ))}
             </div>
           </div>
-          <EventPagination />
-        </section>
-      </>
-  
+        </div>
+        <EventPagination />
+      </section>
+    </>
   );
 }
