@@ -30,29 +30,29 @@ export default function Event() {
           }}
           width="600"
         />
-        <div className="bg-white p-4 rounded-b-lg shadow md:rounded-b-none md:rounded-r-lg">
+        <div className="bg-white dark:bg-gray-900 p-4 rounded-b-lg shadow md:rounded-b-none md:rounded-r-lg">
           <h2 className="text-xl font-semibold">
             In this The DAVID & GOLIATH framework for growing a Service-based
             business.
           </h2>
-          <p className="text-sm font-medium text-black my-2">
+          <p className="text-sm font-medium  my-2">
             Event by <span> Obi Umenze (Cobe)</span>
           </p>
-          <p className="text-sm text-black flex items-center gap-2 my-1">
+          <p className="text-sm  flex items-center gap-2 my-1">
             <BsCalendar2Date size={15} /> Sat, Jun 8, 2024, 8:45 PM - 10:45 PM
             (your local time)
           </p>
           <div className="flex items-center justify-between py-2">
-            <p className="text-sm text-black flex items-center gap-2 ">
+            <p className="text-sm  flex items-center gap-2 ">
               {" "}
               <CiMicrophoneOn size={15} />
               Audio event
             </p>
-            <p className="text-sm text-black flex items-center gap-2 ">
+            <p className="text-sm  flex items-center gap-2 ">
               {" "}
               <GiDuration size={15} /> 2 hours{" "}
             </p>
-            <p className="text-sm text-black flex items-center gap-2 ">
+            <p className="text-sm  flex items-center gap-2 ">
               <FiUsers size={15} /> 9,220 attendees
             </p>
             <div className="flex space-x-2">
@@ -108,7 +108,7 @@ export default function Event() {
         </div>
       </div>
       <div className="flex flex-col self-start space-y-4 w-full  lg:max-w-xs">
-        <div className="bg-white p-4 rounded-lg shadow">
+        <div className="bg-white dark:bg-gray-900 p-4 rounded-lg shadow">
           <h3 className="text-lg font-semibold">
             Host an event on Workshopify and invite your network
           </h3>
@@ -119,7 +119,7 @@ export default function Event() {
             Create event
           </Button>
         </div>
-        <div className="bg-white p-4 rounded-lg shadow">
+        <div className="bg-white dark:bg-gray-900 p-4 rounded-lg shadow">
           <div className="flex justify-between items-center">
             <h3 className="text-lg font-semibold">Other events for you</h3>
             <Button className="text-blue-600" variant="ghost">
