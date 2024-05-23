@@ -2,8 +2,6 @@
 import { Button } from "@/components/ui/button";
 import React, { MouseEventHandler } from "react";
 import { useGoogleLogin } from "@react-oauth/google";
-import { useLinkedInLogin } from "./urls";
-import { PROVIDER, PROVIDER_NAME, getProvidersUrls } from "./linkedin";
 
 export function LoginForm() {
   const responseGoogle = useGoogleLogin({
@@ -16,18 +14,6 @@ export function LoginForm() {
       }
     },
   });
-
-  // const providersUrls = getProvidersUrls();
-
-  // const { authToken, handleLinkedInAuth } = useLinkedInLogin();
-
-  // return Object.keys(PROVIDER).map((provider) => (
-  //   <div key={provider}>
-  //     <Button linkTo={providersUrls[provider]}>
-  //       {PROVIDER_NAME[provider]}
-  //     </Button>
-  //   </div>
-  // ));
 
   return (
     <div className="space-y-4">
@@ -43,7 +29,6 @@ export function LoginForm() {
       <Button
         className="w-full shadow-sm hover:shadow-md transition-all"
         variant="outline"
-        onClick={handleLinkedInAuth}
       >
         <LinkedInIcon className="h-5 w-5 mr-2" />
         Login with LinkedIn
