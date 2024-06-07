@@ -1,13 +1,12 @@
 "use client";
-import { Button } from "@/components/ui/button";
-import React, { MouseEventHandler } from "react";
+import React from "react";
 import { useGoogleLogin } from "@react-oauth/google";
+import styles from "./LoginForm.module.scss";
 
 export function LoginForm() {
   const responseGoogle = useGoogleLogin({
     onSuccess: async (tokenResponse) => {
       try {
-        // FIXME - This is a placeholder for the actual login logic
         console.log(tokenResponse, "token");
       } catch (error: any) {
         console.log(error?.response?.data?.detail);
@@ -16,24 +15,10 @@ export function LoginForm() {
   });
 
   return (
-    <div className="space-y-4">
-      <Button
-        className="w-full shadow-sm hover:shadow-md transition-all"
-        variant="outline"
-        type="submit"
-        onClick={responseGoogle as MouseEventHandler<HTMLButtonElement>}
-      >
-        <GoogleIcon className="h-5 w-5 mr-2" />
-        Login with Google
-      </Button>
-      <Button
-        className="w-full shadow-sm hover:shadow-md transition-all"
-        variant="outline"
-      >
-        <LinkedInIcon className="h-5 w-5 mr-2" />
-        Login with LinkedIn
-      </Button>
-    </div>
+    <section className={styles["section"]}>
+      <GoogleIcon />
+      <LinkedInIcon />
+    </section>
   );
 }
 
