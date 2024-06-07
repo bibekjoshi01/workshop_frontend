@@ -4,7 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./Header.module.scss";
-import Logo from "@/assets/logo.svg";
+import Logo from "@/assets/Logo.png";
 import ProfileIcon from "@/assets/profile.jpg";
 import { IoNotifications } from "react-icons/io5";
 
