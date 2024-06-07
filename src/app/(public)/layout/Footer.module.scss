@@ -1,0 +1,30 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+
+.footer {
+  border-top: 1px solid #ccc;
+  background: #ffffff;
+
+  // Copyright Element
+  &__copyright {
+    margin: 0 auto;
+    padding: $sectionPaddingX $sectionPaddingY;
+    position: relative;
+    max-width: $maxWidth;
+    @include flex(center, space-between, row, 20px);
+  }
+
+  // Social Icons Element
+  &__social-icons {
+    @include flex(center, space-between, row, 20px);
+
+    svg {
+      font-size: 1.6rem;
+    }
+  }
+
+  // Message Modifier
+  &__message {
+    @include font($primaryFont, 1.6rem, 500);
+  }
+}

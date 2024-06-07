@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Inter, Open_Sans } from "next/font/google";
 import Header from "./layout/header";
 import Footer from "./layout/footer";
-import "../globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,7 +25,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className={`${openSans.className} bgColor publicBody`}>
+    <div className={`${openSans.className}`}>
       <Header />
       <div className={"main"}>{children}</div>
       <Footer />

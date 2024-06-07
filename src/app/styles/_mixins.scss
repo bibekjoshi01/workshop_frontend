@@ -1,0 +1,111 @@
+@import "./variables";
+
+@mixin flex($align-items, $justify-content, $direction, $gap) {
+  display: flex;
+  align-items: $align-items;
+  justify-content: $justify-content;
+  flex-direction: $direction;
+  gap: $gap;
+}
+
+@mixin position(
+  $position,
+  $top,
+  $bottom,
+  $left,
+  $right,
+  $translateX,
+  $translateY
+) {
+  position: $position;
+  top: $top;
+  bottom: $bottom;
+  left: $left;
+  right: $right;
+  transform: translate($translateX, $translateY);
+}
+
+@mixin font($font-family, $size, $weight) {
+  font-family: $font-family;
+  font-size: $size;
+  font-weight: $weight;
+}
+
+// mobile responsive
+@mixin xs {
+  @media only screen and (max-width: 480px) {
+    @content;
+  }
+}
+
+// tab responsive
+@mixin sm {
+  @media only screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media only screen and (max-width: 1148px) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media only screen and (min-width: 1148px) {
+    @content;
+  }
+}
+
+@mixin button {
+  @include flex(center, center, row, 10px);
+  @include font($primaryFont, 1.5rem, 500);
+  border: none;
+  color: $white;
+  text-transform: capitalize;
+  background: #1f78d1;
+  display: inline-block;
+  line-height: 26px;
+  padding: 0.25em 1em;
+  border-radius: 2px;
+  word-wrap: break-word;
+  pointer-events: all;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.9;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+}
+
+@mixin input {
+  @include font($primaryFont, 16px, 400);
+  background: #fff;
+  border: 1px solid $borderColor;
+  border-radius: 10px;
+  padding: 10px 35px 10px 15px;
+  color: $black;
+  letter-spacing: 0.05rem;
+  width: 100%;
+  transition: all 0.5s;
+
+  &:focus {
+    outline: none;
+    border: 1px solid $black;
+  }
+
+  @include sm {
+    font-size: 1.8rem;
+  }
+}
