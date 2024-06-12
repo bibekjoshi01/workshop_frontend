@@ -103,20 +103,15 @@
 }
 
 @mixin input {
-  @include font($primaryFont, 16px, 400);
+  @include font($primaryFont, 14px, 400);
   background: #fff;
   border: 1px solid $borderColor;
-  border-radius: 10px;
+  border-radius: 2px;
   padding: 10px 35px 10px 15px;
   color: $black;
-  letter-spacing: 0.05rem;
+  // letter-spacing: 0.05rem;
   width: 100%;
   transition: all 0.5s;
-
-  &:focus {
-    outline: none;
-    border: 1px solid $black;
-  }
 
   @include sm {
     font-size: 1.8rem;
