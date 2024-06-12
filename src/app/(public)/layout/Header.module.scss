@@ -1,0 +1,111 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+
+.header {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+  background: #ffffff;
+
+  .header_lg_container {
+    @include flex(center, space-between, row, 20px);
+    padding: $sectionPaddingX $sectionPaddingY;
+    position: relative;
+    max-width: $maxWidth;
+    margin: 0 auto;
+
+    .header_left {
+      @include flex(center, center, row, 20px);
+      .header__logo {
+        img {
+          max-width: 100%;
+          width: 60%;
+          height: auto;
+        }
+      }
+
+      .header__nav {
+        .main-nav__list {
+          @include flex(center, space-between, row, 30px);
+          .main-nav__item {
+            @include font($primaryFont, 1.5rem, 600);
+            .main-nav__link {
+              color: $secondaryColor;
+              transition: all ease 0.2s;
+
+              &:hover {
+                color: $primaryColor;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .header__actions {
+      @include flex(center, center, row, 10px);
+
+      .header-actions__item {
+        @include button();
+
+        &.signin {
+          @include font($primaryFont, 1.5rem, 600);
+          background-color: transparent;
+          color: $secondaryColor;
+          transition: all ease 0.2s;
+
+          &:hover {
+            color: $primaryColor;
+          }
+        }
+      }
+    }
+
+    .header-logged-in__actions {
+      @include flex(center, end, row, 30px);
+
+      * {
+        cursor: pointer;
+      }
+
+      .notification {
+        svg {
+          font-size: 2.5rem;
+          color: #ccc;
+        }
+      }
+
+      .profile {
+        position: relative;
+
+        img {
+          border-radius: 50%;
+          border: 1px solid $secondaryColor;
+        }
+
+        .modal {
+          position: absolute;
+          top: 100%;
+          right: 0;
+          width: max-content;
+          background-color: white;
+          border: none;
+          box-shadow: (0,0,0,0.3) 0px 1px 3px 0px;
+          z-index: 1;
+
+          li {
+            @include font($primaryFont, 1.4rem, 500);
+            line-height: 2rem;
+            padding: 10px 20px;
+            transition: all 0.3s;
+            border-bottom: 0.5px solid #eee;
+            color: $primaryColor;
+            
+            &:hover {
+              background-color: #fafafa;
+              border-bottom: 0.5px solid #fafafa;
+            }
+          }
+        }
+      }
+    }
+  }
+}

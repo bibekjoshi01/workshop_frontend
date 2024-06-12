@@ -1,0 +1,64 @@
+@use "../../../styles/mixins" as *;
+// @use "../../../styles/variables" as *;
+
+.wrapper {
+    height: 10vh;
+    margin-block: calc($sectionPaddingY / 2);
+    border-bottom: 1px solid $borderColor;
+
+    @include md {
+        background-image: none;
+    }
+
+    .main {
+        max-width: $maxWidth;
+        margin-inline: auto;
+
+        @include md {
+            margin-inline: calc($sectionPaddingX * 2) 0;
+        }
+
+        .search {
+            display: flex;
+            margin-inline: auto;
+            gap: 20px;
+            width: 80%;
+            @include md{
+                width: 100%;
+            }
+
+            .input {
+                border: 1px solid $borderColor;
+                display: flex;
+                align-items: center;
+                flex-grow: 1;
+                padding: 0.5rem 2rem;
+
+                span {
+                    font-size: 20px;
+                    font-weight: 900;
+                    color : gray;
+                }
+
+                input {
+                    flex-grow: 1;
+                    @include input;
+                    border: none;
+                    outline: none;
+                }
+
+                transition: 0.2s all ease;
+                &:hover {
+                    border-color: $primaryColor;
+                    span {
+                        color: $primaryColor;
+                    }
+                }
+            }
+
+            button {
+                @include button;
+            }
+        }
+    }
+}
