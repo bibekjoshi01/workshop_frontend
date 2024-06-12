@@ -1,11 +1,9 @@
-import React from "react";
+import Hero from "./components/hero";
 
 export default function Home() {
   return (
-    <React.Fragment>
-      <div className="text" style={{ height: "80vh" }}>
-        Hello
-      </div>
-    </React.Fragment>
+    <>
+      <Hero />
+    </>
   );
 }

@@ -1,0 +1,69 @@
+@use "../../../styles/mixins" as *;
+// @use "../../../styles/variables" as *;
+
+.wrapper {
+    // height: 100vh;
+    height: 60vh;
+    background-image: url("/assets/hero_bg2.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @include md {
+        background-image: none;
+    }
+
+    .main {
+        max-width: $maxWidth;
+        margin-inline: auto;
+
+        @include md {
+            margin-inline: calc($sectionPaddingX * 2) 0;
+        }
+
+        .text__wrapper {
+
+            padding-block: $sectionPaddingY;
+
+            .text__container {
+                width: 40%;
+
+                @include md {
+                    width: 60%;
+                }
+
+                @include sm {
+                    width: 100%;
+                }
+
+
+                .text__heading {
+                    font-size: $textXs;
+                    font-weight: 700;
+                    padding-block: $sectionPaddingY calc($sectionPaddingY / 2);
+                }
+
+                .text__detail {
+                    font-size: $textMd;
+                    line-height: 2.6rem;
+                    color: $secondaryColor;
+                }
+
+                button {
+                    @include button;
+                    padding: 1.2rem 2rem;
+                    margin-block-start: 3.2rem;
+                    margin-inline-end: 2.4rem;
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 2rem;
+                    justify-content: space-between;
+                }
+
+                .outlinedBtn {
+                    @include outlinedBtn;
+                }
+            }
+        }
+    }
+}

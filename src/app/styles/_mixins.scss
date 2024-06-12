@@ -8,15 +8,13 @@
   gap: $gap;
 }
 
-@mixin position(
-  $position,
+@mixin position($position,
   $top,
   $bottom,
   $left,
   $right,
   $translateX,
-  $translateY
-) {
+  $translateY) {
   position: $position;
   top: $top;
   bottom: $bottom;
@@ -62,6 +60,7 @@
   @include font($primaryFont, 1.5rem, 500);
   border: none;
   color: $white;
+  font-weight: 600;
   text-transform: capitalize;
   background: #1f78d1;
   display: inline-block;
@@ -83,9 +82,23 @@
   &:disabled {
     opacity: 0.5;
     pointer-events: none;
+
     &:hover {
       opacity: 0.9;
     }
+  }
+}
+
+@mixin outlinedBtn {
+  @extend button;
+  background: white;
+  color: $primaryColor;
+  border: 1px solid $primaryColor;
+  transition: 0.2s all ease;
+
+  &:hover {
+    background-color: $primaryColor;
+    color: $white;
   }
 }
 
