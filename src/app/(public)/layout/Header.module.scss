@@ -6,6 +6,10 @@
   background: #ffffff;
 
   .header_lg_container {
+    @include md {
+      display: none;
+    }
+
     @include flex(center, space-between, row, 20px);
     padding: $sectionPaddingX $sectionPaddingY;
     position: relative;
@@ -88,7 +92,7 @@
           width: max-content;
           background-color: white;
           border: none;
-          box-shadow: (0,0,0,0.3) 0px 1px 3px 0px;
+          box-shadow: (0, 0, 0, 0.3) 0px 1px 3px 0px;
           z-index: 1;
 
           li {
@@ -98,7 +102,7 @@
             transition: all 0.3s;
             border-bottom: 0.5px solid #eee;
             color: $primaryColor;
-            
+
             &:hover {
               background-color: #fafafa;
               border-bottom: 0.5px solid #fafafa;
@@ -106,6 +110,12 @@
           }
         }
       }
+    }
+  }
+
+  .header_sm_container {
+    @include lg {
+      display: none;
     }
   }
 }

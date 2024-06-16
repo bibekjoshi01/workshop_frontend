@@ -96,6 +96,9 @@ export default function Header() {
           </div>
         )}
       </section>
+      <section className={styles["header_sm_container"]}>
+        Nothing
+      </section>
     </header>
   );
 }
